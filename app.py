@@ -77,6 +77,7 @@ def exercise4(city='Evanston, IL', search_term=''):
         restaurant=restaurants[0],
         restaurant2=restaurants[1],
         restaurant3=restaurants[2],
+        restaurant4=restaurants[3]
     )
 
 
