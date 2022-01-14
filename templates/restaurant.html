@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8"><title>Top Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Restaurant</title>
+</head>
+<body>
+    {% include 'includes/header.html' %}
+
+    <p>Search location: {{city}} || Search term: {{search_term or 'None Specified'}}</p>
+	
+    <main>
+		<section>
+        <p><img src= {{ restaurant.get('image_url') }}></p>
+		<p><h1>{{ restaurant.get('name') }}</h1></p>
+        <p><b>Price:</b> {{ restaurant.get('price') }}</p>
+        <p><b>Rating:</b> {{ restaurant.get('rating') }}</p>
+        <p><b>Review Count:</b> {{ restaurant.get('review_count') }}</p>
+        <p><b>Address:</b> {{ restaurant.get('display_address') }}</p>
+		</section>
+		
+		<section>
+        <p><img src= {{ restaurant2.get('image_url') }}></p>
+		<p><h1>{{ restaurant2.get('name') }}</h1></p>
+        <p><b>Price:</b> {{ restaurant2.get('price') }}</p>
+        <p><b>Rating:</b> {{ restaurant2.get('rating') }}</p>
+        <p><b>Review Count:</b> {{ restaurant2.get('review_count') }}</p>
+        <p><b>Address:</b> {{ restaurant2.get('display_address') }}</p>
+		</section>
+		
+		<section>
+        <p><img src= {{ restaurant3.get('image_url') }}></p>
+		<p><h1>{{ restaurant3.get('name') }}</h1></p>
+        <p><b>Price:</b> {{ restaurant3.get('price') }}</p>
+        <p><b>Rating:</b> {{ restaurant3.get('rating') }}</p>
+        <p><b>Review Count:</b> {{ restaurant3.get('review_count') }}</p>
+        <p><b>Address:</b> {{ restaurant3.get('display_address') }}</p>
+		</section>
+    </main>
+	
+</body>
+</html>
+
